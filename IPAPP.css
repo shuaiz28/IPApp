@@ -1,0 +1,17 @@
+.charA {
+	color: #4285F4;
+}
+.charP1 {
+	color: #EA4335;
+}
+.charP2 {
+	color: #FBBC05;
+}
+.queryForm {
+	border: 1px solid #CCC;
+	padding: 10px 10px 2px 10px;
+	margin-bottom: 15px;
+}
+.welcome {
+	margin-top: 70px;
+}

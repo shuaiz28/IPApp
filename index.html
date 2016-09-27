@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>IP App</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="IPAPP.js"></script>
+	<link rel="stylesheet" type="text/css" href="IPAPP.css">
+</head>
+<body ng-app="myApp">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">IP<span class="charA">A</span><span class="charP1">P</span><span class="charP2">P</span></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid" ng-controller="myController" ng-init="init()">
+		<h3 class="welcome">Welcome to IP<span class="charA">A</span><span class="charP1">P</span><span class="charP2">P</span></h3>
+		<hr />
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<form role="form" class="queryForm">
+					<div class="form-group">
+						<label>Query IP</label>
+						<input type="text" class="form-control" placeholder={{curIPInfo.query}} ng-model="inputIP"></input>
+					</div>
+					<div align="right"><button class="btn btn-primary" ng-click="queryIP()">Submit</button></div>	
+				</form>
+			</div>
+		</div>
+		
+		<div class="col-md-6">
+			<div class="panel panel-info" id="curIPInfoPanel">
+				<div class="panel-heading">{{panelHeader}}</div>
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<th>IP: </th>
+							<td>{{curIPInfo.query}}</td>
+						</tr>
+						<tr>
+							<th>Country: </th>
+							<td>{{curIPInfo.country}}</td>
+						</tr>
+						<tr>
+							<th>Country Code: </th>
+							<td>{{curIPInfo.countryCode}}</td>
+						</tr>
+						<tr>
+							<th>Region: </th>
+							<td>{{curIPInfo.region}}</td>
+						</tr>
+						<tr>
+							<th>Region Name: </th>
+							<td>{{curIPInfo.regionName}}</td>
+						</tr>
+						<tr>
+							<th>City: </th>
+							<td>{{curIPInfo.city}}</td>
+						</tr>
+						<tr>
+							<th>Zip Code: </th>
+							<td>{{curIPInfo.zip}}</td>
+						</tr>
+						<tr>
+							<th>Latitude</th>
+							<td>{{curIPInfo.lat}}</td>
+						</tr>
+						<tr>
+							<th>Longitude</th>
+							<td>{{curIPInfo.lon}}</td>
+						</tr>
+						<tr>
+							<th>Timezone</th>
+							<td>{{curIPInfo.timezone}}</td>
+						</tr>
+						<tr>
+							<th>ISP: </th>
+							<td>{{curIPInfo.isp}}</td>
+						</tr>
+						<tr>
+							<th>Organization</th>
+							<td>{{curIPInfo.org}}</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td></td>
+						</tr>
+					</table>	
+				</div>
+			</div>
+
+			<div class="panel panel-info" id="queryIPInfoPanel">
+				<div class="panel-heading">{{panelHeader}}</div>
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<th>IP: </th>
+							<td>{{queryIPInfo.query}}</td>
+						</tr>
+						<tr>
+							<th>Country: </th>
+							<td>{{queryIPInfo.country}}</td>
+						</tr>
+						<tr>
+							<th>Country Code: </th>
+							<td>{{queryIPInfo.countryCode}}</td>
+						</tr>
+						<tr>
+							<th>Region: </th>
+							<td>{{queryIPInfo.region}}</td>
+						</tr>
+						<tr>
+							<th>Region Name: </th>
+							<td>{{queryIPInfo.regionName}}</td>
+						</tr>
+						<tr>
+							<th>City: </th>
+							<td>{{queryIPInfo.city}}</td>
+						</tr>
+						<tr>
+							<th>Zip Code: </th>
+							<td>{{queryIPInfo.zip}}</td>
+						</tr>
+						<tr>
+							<th>Latitude</th>
+							<td>{{queryIPInfo.lat}}</td>
+						</tr>
+						<tr>
+							<th>Longitude</th>
+							<td>{{queryIPInfo.lon}}</td>
+						</tr>
+						<tr>
+							<th>Timezone</th>
+							<td>{{queryIPInfo.timezone}}</td>
+						</tr>
+						<tr>
+							<th>ISP: </th>
+							<td>{{queryIPInfo.isp}}</td>
+						</tr>
+						<tr>
+							<th>Organization</th>
+							<td>{{queryIPInfo.org}}</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td></td>
+						</tr>
+					</table>	
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-5 col-md-offset-1" id="mapholder">
+			
+		</div>
+
+
+
+
+
+
+	</div>
+
+</body>
+</html>
